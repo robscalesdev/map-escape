@@ -27,6 +27,7 @@ export const GameCard = styled.div`
 
 export const CardLink = styled(Link)`
   text-decoration: none;
+  color: black;
 
   &:visited {
     color: black;
