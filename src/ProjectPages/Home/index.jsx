@@ -22,27 +22,27 @@ const Home = () => {
             <ExplanationP>Each turn you will be able to place one wall, then it will get to move one tile. Can you capture it before it's too late?</ExplanationP>
         </ExplanationContainer>
         <GameContainer>
-            <GameCard>
-                <CardLink to='/surround'>
+            <CardLink to='/surround'>
+                <GameCard>
                     <CardTitle>Surround</CardTitle>
                     <CardImage></CardImage>
-                    <CardDesc>Don't let the chicken reach the edges.</CardDesc>
-                </CardLink>
-            </GameCard>
-            <GameCard>
-                <CardLink to='/trap'>
+                    <CardDesc>Don't let the chicken reach the edges.</CardDesc>            
+                </GameCard>
+            </CardLink>
+            <CardLink to='/trap'>
+                <GameCard>
                     <CardTitle>Trap</CardTitle>
                     <CardImage></CardImage>
                     <CardDesc>Place walls until the chicken has no moves remaining.</CardDesc>
-                </CardLink>
-            </GameCard>
-            <GameCard>
-                <CardLink to='/about'>
+                </GameCard>
+            </CardLink>
+            <CardLink to='/about'>
+                <GameCard>
                     <CardTitle>About</CardTitle>
                     <CardImage></CardImage>
-                    <CardDesc>Learn more about the logic the chicken uses to select where to go.</CardDesc>
-                </CardLink>
-            </GameCard>
+                    <CardDesc>Learn more about the logic the chicken uses to select where to go.</CardDesc>            
+                </GameCard>
+            </CardLink>
         </GameContainer>
     </HomeContainer>
   )
