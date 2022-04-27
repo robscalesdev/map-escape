@@ -6,7 +6,9 @@ import {
     BoardBorder,
     BoardHeader,
     TitleWrapper,
-    Score
+    Score,
+    NewGameButton,
+    NewGameWrapper
 } from './BoardElements'
 
 const Board = () => {
@@ -193,9 +195,9 @@ const Board = () => {
             <h1>Surround</h1>
             <h2>Turn {turnNumber}</h2>
           </TitleWrapper>
-          {winner.length > 0 && <Score>Winner: {winner}
-          {winner.length > 0 && <button onClick={newGame}>New Game</button>}
-          </Score>}
+
+          {winner.length > 0 && <Score>Winner: {winner}</Score>}
+          {winner.length > 0 && <NewGameWrapper><NewGameButton onClick={newGame}>New Game</NewGameButton></NewGameWrapper>}
         </BoardHeader>
         <BoardBorder>
           {board.map((data, i) => {

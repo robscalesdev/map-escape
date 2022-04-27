@@ -29,6 +29,18 @@ export const TitleWrapper = styled.div`
 
 export const Score = styled.h3``
 
+export const NewGameWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+`
+
+export const NewGameButton = styled.button`
+  margin-left: 10%;
+  font-size: 1.5rem;
+`
+
 export const BoardBorder = styled.div``
 
 export const Row = styled.div`
