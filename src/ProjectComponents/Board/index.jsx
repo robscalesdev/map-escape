@@ -22,7 +22,7 @@ const Board = () => {
   const [board, setBoard] = useState([])
   const [walls, setWalls] = useState([])
   const [seen] = useState([])
-  const [position] = useState([3, 3])
+  const [position, setPosition] = useState([3, 3])
   const [path] = useState([])
   const [gameValid, setGameValid] = useState(true)
 
@@ -32,6 +32,16 @@ const Board = () => {
     resetPath()
   // eslint-disable-next-line
   }, [])
+
+  const newGame = () => {
+    resetBoard()
+    resetWalls()
+    resetPath()
+    setPosition([3, 3])
+    setWinner('')
+    setGameValid(true)
+    setTurnNumber(0)
+  }
 
   const resetBoard = () => {
     // keeps adding new boards without this
@@ -183,7 +193,9 @@ const Board = () => {
             <h1>Surround</h1>
             <h2>Turn {turnNumber}</h2>
           </TitleWrapper>
-          {winner.length > 0 && <Score>Winner: {winner}</Score>}
+          {winner.length > 0 && <Score>Winner: {winner}
+          {winner.length > 0 && <button onClick={newGame}>New Game</button>}
+          </Score>}
         </BoardHeader>
         <BoardBorder>
           {board.map((data, i) => {
