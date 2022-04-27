@@ -5,6 +5,7 @@ export const Tile = styled.div`
   height: 75px;
   margin: 2px;
   border: solid;
+  border-width: 3px;
   border-radius: 10%;
   display: flex;
   justify-content: center;
@@ -19,11 +20,13 @@ export const Tile = styled.div`
   @media screen and (max-width: 700px) {
     width: 55px;
     height: 55px;
+    border-width: 2px;
   }
 
   @media screen and (max-width: 650px) {
     width: 45px;
     height: 45px;
+    border-width: 1px;
     margin: 1px;
   }
 `
